@@ -1,0 +1,17 @@
+{
+	"apiTokenParts": [
+		"xoxb",
+		"215317080215",
+		"Fw9aCx0l2vGJQb645Rel1sWL"
+	],
+	"killPhrase": "shutdown bot 4",
+	"history": {
+		"lastChannel": ""
+	},
+	"general": {
+		"defaultChannel": "general"
+	},
+	"name": {
+		"botName": "Team 4 Bot"
+	}
+}
