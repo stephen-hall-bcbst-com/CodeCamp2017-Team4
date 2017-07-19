@@ -12,7 +12,15 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
 
-        Slack.postMessageToChannel(channelName, 'I heard you needed help\n. With me you have some options!First ask me a question. You can ask me to add or even what the weather is!I can tell you quotes that are inspiring and also make you laugh with some jokes. When you are ready type what you want to tell or ask me in the message bar and I will respond as soon as I have the answer.Enjoy!');
+        Slack.postMessageToChannel(channelName, "I heard you needed help. I can answer simple questions you have about how I work. You can also ask me questions about math, weather, advice and I even tell jokes.Just make sure to include a question mark when asking a question");
+
+        if (message.includes("weather")) {
+            Slack.postMessageToChannel(channelName, "If you type your question about the weather in the message bar, I can tell you what the weather is!");
+        } else if (message.includes("joke")) {
+            Slack.postMessageToChannel(channelName, "If you ask the bot to tell you a joke in the message bar it is sure to make you laugh. Make sure you add a question mark to your meessage though!");
+        } else {
+            
+        }
 
         // *********************************************************************
         // STOP CODING!
