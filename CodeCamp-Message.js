@@ -23,9 +23,9 @@ module.exports = {
 
         // randomizer for quotes
         var quotes = ['Dont cry because it is over smile because it happened.', 'Dwell on the beauty of life watch the stars and see yourself running with them.', 'Those who wish to sing always find a song.', 'Every problem has a gift for you in its hand', 'Everything great was accomplished by fools who dream'];
-        var RQ = Math.floor((Math.random() * 5));
+        var random = Math.floor((Math.random() * 5));
         if (message.includes('Tell me a quote')) {
-            Slack.postMessageToChannel(channelName, quotes[RQ]);
+            Slack.postMessageToChannel(channelName, quotes[random]);
         }
 
 
