@@ -12,8 +12,9 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
 
-        var response = "I heard you needed help! I can answer simple questions you have about how I work. You can also ask me questions about math, the weather, and I even tell jokes and quotes.Just make sure to include a question mark when you ask a question.";
-       
+         
+         var response = "I heard you needed help! I can answer simple questions you have about how I work. You can also ask me questions about math, the weather, and I even tell jokes and quotes.Just make sure to include a question mark when you ask a question.";
+        
         // used when message says "help" and specifies that they need help with how to find out the weather;
         if (message.includes("weather")) {
             response = "If you type your question about the weather in the message bar, I can tell you what the weather is today!";
