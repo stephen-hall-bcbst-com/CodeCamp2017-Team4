@@ -12,7 +12,7 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
 
-         var memory = require('./CodeCamp-help.js');
+         var memory = require('./CodeCamp-Memory.js');
 
          var response = "I heard you needed help! I can answer simple questions you have about how I work. You can also ask me questions about math, the weather, and I even tell jokes and quotes.Just make sure to include a question mark when you ask a question.";
         
