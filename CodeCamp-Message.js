@@ -23,7 +23,13 @@ module.exports = {
         // randomizer for jokes
         
         
-        var 
+        var jokes = ["Random1", "Random2", "Random3"];
+
+        var random = Math.floor((Math.random() * 3));
+
+        Slack.postMessageToChannel(channelName, jokes[random]);
+
+
 
 
 
