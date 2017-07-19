@@ -37,7 +37,6 @@ module.exports = {
         }
 
         // randomizer for jokes
-<<<<<<< HEAD
         var jokes = ["What do you call a fake noodle? an impasta.", 
                     "How does a penguin build it’s house? Igloos it together.", 
                     "What did the ocean say to the shore? Nothing, it just waved.", 
@@ -58,19 +57,6 @@ module.exports = {
        
     
 
-=======
-        var jokes = ["What do you call a fake noodle? an impasta.", "How does a penguin build it’s house? Igloos it together.", "What did the ocean say to the shore? Nothing, it just waved.", "Why do crabs never give to charity? Because they’re shellfish.", "What do you call a man with no nose and no body? Nobody nose."];
-        var random = Math.floor((Math.random() * 5));
-      
-        // code for activating randomizer for jokes
-        if (message.includes('Tell me a joke')) {
-        Slack.postMessageToChannel(channelName, jokes[random]);
-        }
-
-        if (message.includes('tell me a joke')) {
-        Slack.postMessageToChannel(channelName, jokes[random]);
-        }
->>>>>>> 282cff852ccf2472773aa3d9cbd15280452a5fa5
 
         // The bots responses to things you say
         if (message.includes('Hello')) {
