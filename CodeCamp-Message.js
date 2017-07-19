@@ -12,16 +12,40 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
         
-       
+        
+
+
+
         // response variables
         var response = "sorry i dont know how to react to that";
         var grat = 'youre welcome';
         var greetings = 'Hi there';
+        var thanks = 'Thank you';
+        var joke = 'What do you call a fake noodle, an impasta';
 
-        // what makes the bot respond to hello
+
+
+        // The bots responses
         if (message.includes('Hello')) {
-            greetings = 'Hi there';
+             Slack.postMessageToChannel(channelName, greetings);
         }
+
+        if (message.includes('Good job')) {
+             Slack.postMessageToChannel(channelName, thanks);
+        }
+
+        if (message.includes('Thank you')) {
+            Slack.postMessageToChannel(channelName, grat);
+        }
+
+        if (message.includes('Tell me a joke')) {
+            Slack.postMessageToChannel(channelName, joke);
+        }
+
+
+
+        
+        
 
         
 
