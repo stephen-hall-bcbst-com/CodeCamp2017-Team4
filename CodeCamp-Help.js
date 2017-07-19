@@ -23,16 +23,18 @@ module.exports = {
             if (memory.askedAboutWeather == true) {
                 response = "You have already asked this question.";
             }
-            
-            memory.askedAboutWeather = true;
+              memory.askedAboutWeather = true;
         // used when message says "help" and specifies that they need help with how to ask the bot to tell a joke;
         } else if (message.includes("joke")) {
             response = "If you say to the bot to 'tell me joke' in the message bar it is sure to make you laugh.";
-        
+            
         // used when message says "help" and specifies that they need help with how to ask the bot to add two numbers;  
         } else if (message.includes("adding")) {
             response = "If you ask the bot to add two numbers and include the numbers you would like to add with the plus sign inbetween, the bot will add your two values.";
-
+            if (memory.askedAboutAdding == true) {
+                response = "You have already asked this question.";
+            }
+       
         // used when message says "help" and specifies that they need help with how to tell to the bot to tell a quote
         } else if (message.includes("quote")) {
             response = "If you say to the bot 'tell me a quote' the bot will respond with a quote.";
