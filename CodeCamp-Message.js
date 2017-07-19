@@ -13,16 +13,17 @@ module.exports = {
         // *********************************************************************
         
        
-        
+        // response variables
         var response = "sorry i dont know how to react to that";
-        var lc = question.toLowerCase();
+        var grat = 'youre welcome';
+        var greetings = 'Hi there';
 
-        if (lc.includes('Thank')) {
-            response = 'your welcome!';
-        } else if (lc.includes('Good job')) {
-            response = 'your welcome';
-            
+        // what makes the bot respond to hello
+        if (message.includes('Hello')) {
+            greetings = 'Hi there';
         }
+
+        
 
 
 
