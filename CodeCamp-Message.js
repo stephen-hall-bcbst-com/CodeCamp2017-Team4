@@ -24,27 +24,32 @@ module.exports = {
 
 
         // randomizer for quotes
-        var quotes = ['Dont cry because it is over smile because it happened.', 'Dwell on the beauty of life watch the stars and see yourself running with them.', 'Those who wish to sing always find a song.', 'Every problem has a gift for you in its hand.', 'Everything great was accomplished by fools who dream.'];
-        var random = Math.floor((Math.random() * 5));
+        var quotes = ['Dont cry because it is over smile because it happened.',
+         'Dwell on the beauty of life watch the stars and see yourself running with them.', 
+         'Those who wish to sing always find a song.', 
+         'Every problem has a gift for you in its hand.', 
+         'Everything great was accomplished by fools who dream.'];
+       
         
-        // code for activating randomizer for quotes
+        // Code for activating quotes. Used so no quote is repeated until all have been used once.  
         if (message.includes('Tell me a quote')) {
-            Slack.postMessageToChannel(channelName, quotes[random]);
+            Slack.postMessageToChannel(channelName, quotes[memory.lastQuoteTold]);
+            memory.lastQuoteTold = memory.lastQuoteTold + 1; 
+            if (memory.lastQuoteTold == quotes.length) {
+                memory.lastQuoteTold = 0; 
+            }
         }
 
-        if (message.includes('tell me a quote')) {
-            Slack.postMessageToChannel(channelName, quotes[random]);
-        }
+       
 
-        // randomizer for jokes
+        // List of jokes. 
         var jokes = ["What do you call a fake noodle? an impasta.", 
                     "How does a penguin build it’s house? Igloos it together.", 
                     "What did the ocean say to the shore? Nothing, it just waved.", 
                     "Why do crabs never give to charity? Because they’re shellfish.", 
                     "What do you call a man with no nose and no body? Nobody nose."];
 
-        // code for activating randomizer
-        
+        // Code for activating jokes. No joke is told more than once until all have been used once         
 
         if (message.includes('Tell me a joke')) {
             Slack.postMessageToChannel(channelName, jokes[memory.lastJokeTold]);
