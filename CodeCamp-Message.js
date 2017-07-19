@@ -14,7 +14,6 @@ module.exports = {
         
        
         
-        Slack.postMessageToChannel(channelName, 'Hello, how are you?');
         var response = "sorry i dont know how to react to that";
         var lc = question.toLowerCase();
 
