@@ -24,14 +24,20 @@ module.exports = {
 
 
         // randomizer for quotes
-        var quotes = ['Dont cry because it is over smile because it happened.', 'Dwell on the beauty of life watch the stars and see yourself running with them.', 'Those who wish to sing always find a song.', 'Every problem has a gift for you in its hand', 'Everything great was accomplished by fools who dream'];
+        var quotes = ['Dont cry because it is over smile because it happened.', 'Dwell on the beauty of life watch the stars and see yourself running with them.', 'Those who wish to sing always find a song.', 'Every problem has a gift for you in its hand.', 'Everything great was accomplished by fools who dream.'];
         var random = Math.floor((Math.random() * 5));
+        
+        // code for activating randomizer for quotes
         if (message.includes('Tell me a quote')) {
             Slack.postMessageToChannel(channelName, quotes[random]);
         }
 
+        if (message.includes('tell me a quote')) {
+            Slack.postMessageToChannel(channelName, quotes[random]);
+        }
 
         // randomizer for jokes
+<<<<<<< HEAD
         var jokes = ["What do you call a fake noodle? an impasta.", 
                     "How does a penguin build it’s house? Igloos it together.", 
                     "What did the ocean say to the shore? Nothing, it just waved.", 
@@ -52,6 +58,19 @@ module.exports = {
        
     
 
+=======
+        var jokes = ["What do you call a fake noodle? an impasta.", "How does a penguin build it’s house? Igloos it together.", "What did the ocean say to the shore? Nothing, it just waved.", "Why do crabs never give to charity? Because they’re shellfish.", "What do you call a man with no nose and no body? Nobody nose."];
+        var random = Math.floor((Math.random() * 5));
+      
+        // code for activating randomizer for jokes
+        if (message.includes('Tell me a joke')) {
+        Slack.postMessageToChannel(channelName, jokes[random]);
+        }
+
+        if (message.includes('tell me a joke')) {
+        Slack.postMessageToChannel(channelName, jokes[random]);
+        }
+>>>>>>> 282cff852ccf2472773aa3d9cbd15280452a5fa5
 
         // The bots responses to things you say
         if (message.includes('Hello')) {
@@ -86,9 +105,7 @@ module.exports = {
             Slack.postMessageToChannel(channelName, rap);
         }
 
-        if (message.includes('Tell me a quote')) {
-            Slack.postMessageToChannel(channelName, quote)
-        }
+        
 
 
 
