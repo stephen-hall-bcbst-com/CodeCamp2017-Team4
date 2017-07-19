@@ -19,17 +19,18 @@ module.exports = {
         if (message.includes("weather")) {
             Slack.postMessageToChannel(channelName, "If you type your question about the weather in the message bar, I can tell you what the weather is today!");
        
-       // used when message says "help" and specifies that they need help with how to ask the bot to tell a joke;
-     } else if (message.includes("joke")) {
-            Slack.postMessageToChannel(channelName, "If you ask the bot to tell you a joke in the message bar it is sure to make you laugh.");
-      
-       // used when message says "help" and specifies with how to ask the bot to add two numbers;  
-     } else if (message.includes("adding")) {
-         Slack.postMessageToChannel(channelName, "If you ask the bot to add two numbers and include the numbers you would like to add with the plus sign inbetween, the bot will add your two values.");
-
+        // used when message says "help" and specifies that they need help with how to ask the bot to tell a joke;
+        } else if (message.includes("joke")) {
+                Slack.postMessageToChannel(channelName, "If you say to the bot to 'tell me joke' in the message bar it is sure to make you laugh.");
+        
+            // used when message says "help" and specifies with how to ask the bot to add two numbers;  
+        } else if (message.includes("adding")) {
+            Slack.postMessageToChannel(channelName, "If you ask the bot to add two numbers and include the numbers you would like to add with the plus sign inbetween, the bot will add your two values.");
+        }
+   
 
         // *********************************************************************
         // STOP CODING!
         // *********************************************************************
-    }
-    }
+    },
+};

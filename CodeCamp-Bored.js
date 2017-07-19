@@ -2,8 +2,8 @@
 
 module.exports = {
     settings: {
-        enabled: false,
-        timeoutInSeconds: 15,
+        enabled: true,
+        timeoutInSeconds: 30,
     },
 
     /**
@@ -14,8 +14,8 @@ module.exports = {
         // *********************************************************************
         // CODE HERE!
         // *********************************************************************
-
-        Slack.postMessageToChannel(channel, 'hello are you still there?');
+        
+        Slack.postMessageToChannel(channel, ' Where did you go? I tell jokes, add numbers, tell you the weather, and even give you advice, you cant get bored with me!');
 
         // *********************************************************************
         // STOP CODING!
