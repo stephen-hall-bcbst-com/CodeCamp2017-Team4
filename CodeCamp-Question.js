@@ -15,7 +15,7 @@ module.exports = {
         var response = "I don't understand the question...";
        
         // what to answer when asked about weather 
-        if (qlc.includes("what is the weather")) {
+        if (qlc.includes("How is the weather today.")) {
          response = "Today is partly cloudy with a high temperature of 96 degrees and a low of 73";
      
       // what to answer when asked why is the sky blue 
@@ -23,8 +23,8 @@ module.exports = {
             // handle sky blue question
         }
             // what to answer when asked about birthday 
-        if (qlc.includes("what") && qlc.includes("birthday"));
-        response= "7/18/17";
+        if (qlc.includes("What is your birthday"));
+        response= "July 18th 2017";
              
               // calls out function
         Slack.postMessageToChannel(channelName, response);
