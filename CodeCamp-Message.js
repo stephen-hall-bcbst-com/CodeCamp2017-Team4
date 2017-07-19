@@ -26,8 +26,9 @@ module.exports = {
         var jokes = ["Random1", "Random2", "Random3"];
 
         var random = Math.floor((Math.random() * 3));
-
+        if (message.includes('random')) {
         Slack.postMessageToChannel(channelName, jokes[random]);
+        }
 
 
 
