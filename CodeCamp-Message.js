@@ -12,10 +12,6 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
         
-        
-
-
-
         // response variables
         var response = "sorry i dont know how to react to that";
         var grat = 'youre welcome';
@@ -30,7 +26,15 @@ module.exports = {
              Slack.postMessageToChannel(channelName, greetings);
         }
 
+        if (message.includes('hello')) {
+             Slack.postMessageToChannel(channelName, greetings);
+        }
+
         if (message.includes('Good job')) {
+             Slack.postMessageToChannel(channelName, thanks);
+        }
+
+        if (message.includes('good job')) {
              Slack.postMessageToChannel(channelName, thanks);
         }
 
@@ -38,9 +42,20 @@ module.exports = {
             Slack.postMessageToChannel(channelName, grat);
         }
 
+        if (message.includes('thank you')) {
+            Slack.postMessageToChannel(channelName, grat);
+        }
+
+
         if (message.includes('Tell me a joke')) {
             Slack.postMessageToChannel(channelName, joke);
         }
+
+         if (message.includes('tell me a joke')) {
+            Slack.postMessageToChannel(channelName, joke);
+        }
+
+       
 
 
 
