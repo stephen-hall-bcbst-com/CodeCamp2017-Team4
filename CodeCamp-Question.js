@@ -8,10 +8,11 @@ module.exports = {
      */
     question_received: function(question, channelName, userName, Slack) {
         // *********************************************************************
-        // CODE HERE!
+        // CODE HERE! 
         // *********************************************************************
-
-        Slack.postMessageToChannel(channelName, "Question received.");
+        
+        Slack.postMessageToChannel(channelName, "What a lovely day to go outside.");
+        
 
         // *********************************************************************
         // STOP CODING!
