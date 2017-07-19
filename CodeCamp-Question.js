@@ -15,7 +15,7 @@ module.exports = {
         var response = "I don't understand the question...";
        
         // what to answer when asked about weather 
-        if (qlc.includes("what") && qlc.includes("weather")) {
+        if (qlc.includes("what is the weather")) {
          response = "Today is partly cloudy with a high temperature of 96 degrees and a low of 73";
      
       // what to answer when asked why is the sky blue 
