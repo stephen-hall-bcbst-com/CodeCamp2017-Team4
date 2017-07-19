@@ -12,26 +12,26 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
 
-             // used when message JUST says "help" or "help me"; 
-        Slack.postMessageToChannel(channelName, "I heard you needed help! I can answer simple questions you have about how I work. You can also ask me questions about math, the weather, and I even tell jokes and quotes.Just make sure to include a question mark when asking a question!");
+        var response = "I heard you needed help! I can answer simple questions you have about how I work. You can also ask me questions about math, the weather, and I even tell jokes and quotes.Just make sure to include a question mark when you ask a question.";
        
         // used when message says "help" and specifies that they need help with how to find out the weather;
         if (message.includes("weather")) {
-            Slack.postMessageToChannel(channelName, "If you type your question about the weather in the message bar, I can tell you what the weather is today!");
+            response = "If you type your question about the weather in the message bar, I can tell you what the weather is today!";
        
         // used when message says "help" and specifies that they need help with how to ask the bot to tell a joke;
         } else if (message.includes("joke")) {
-            Slack.postMessageToChannel(channelName, "If you say to the bot to 'tell me joke' in the message bar it is sure to make you laugh.");
+            response = "If you say to the bot to 'tell me joke' in the message bar it is sure to make you laugh.";
         
         // used when message says "help" and specifies that they need help with how to ask the bot to add two numbers;  
         } else if (message.includes("adding")) {
-            Slack.postMessageToChannel(channelName, "If you ask the bot to add two numbers and include the numbers you would like to add with the plus sign inbetween, the bot will add your two values.");
+            response = "If you ask the bot to add two numbers and include the numbers you would like to add with the plus sign inbetween, the bot will add your two values.";
 
         // used when message says "help" and specifies that they need help with how to tell to the bot to tell a quote
         } else if (message.includes("quote")) {
-            Slack.postMessageToChannel(channelName, "If you say to the bot 'tell me a quote' the bot will respond with a quote.");
+            response = "If you say to the bot 'tell me a quote' the bot will respond with a quote.";
            }
    
+            Slack.postMessageToChannel(channelName, response);
 
         // *********************************************************************
         // STOP CODING!
