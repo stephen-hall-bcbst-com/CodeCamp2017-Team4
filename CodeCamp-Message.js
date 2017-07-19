@@ -21,8 +21,8 @@ module.exports = {
         var grat = 'youre welcome';
         var greetings = 'Hi there';
         var thanks = 'Thank you';
-        var joke = 'What do you call a fake noodle, an impasta';
-
+        var joke = 'What do you call a fake noodle? an impasta.';
+        
 
 
         // The bots responses
