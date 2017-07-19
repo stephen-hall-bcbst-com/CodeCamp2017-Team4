@@ -20,11 +20,9 @@ module.exports = {
         var rap = 'What is rapping? i was born 3 days ago';
 
         // randomizer for jokes
-        
-        
         var jokes = ["What do you call a fake noodle? an impasta.", "How does a penguin build it’s house? Igloos it together.", "What did the ocean say to the shore? Nothing, it just waved.", "Why do crabs never give to charity? Because they’re shellfish.", "What do you call a man with no nose and no body? Nobody nose."];
-
         var random = Math.floor((Math.random() * 5));
+       // code for activating randomizer
         if (message.includes('Tell me a joke')) {
         Slack.postMessageToChannel(channelName, jokes[random]);
         }
@@ -33,12 +31,6 @@ module.exports = {
         Slack.postMessageToChannel(channelName, jokes[random]);
         }
     
-
-
-
-
-
-
 
 
         // The bots responses to things you say
@@ -73,6 +65,8 @@ module.exports = {
         if (message.includes('rap for me')) {
             Slack.postMessageToChannel(channelName, rap);
         }
+
+
 
         
 
