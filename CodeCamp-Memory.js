@@ -7,4 +7,5 @@ var askedAboutWeather = false;
 module.exports = {
     botData: botData,
     askedAboutWeather: askedAboutWeather,
+    
 };
