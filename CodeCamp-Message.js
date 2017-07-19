@@ -17,18 +17,22 @@ module.exports = {
         var grat = 'youre welcome';
         var greetings = 'Hi there';
         var thanks = 'Thank you';
-        var joke = 'What do you call a fake noodle? an impasta.';
         var rap = 'What is rapping? i was born 3 days ago';
 
         // randomizer for jokes
         
         
-        var jokes = ["Random1", "Random2", "Random3"];
+        var jokes = ["What do you call a fake noodle? an impasta.", "How does a penguin build it’s house? Igloos it together.", "What did the ocean say to the shore? Nothing, it just waved.", "Why do crabs never give to charity? Because they’re shellfish.", "What do you call a man with no nose and no body? Nobody nose."];
 
         var random = Math.floor((Math.random() * 3));
-        if (message.includes('random')) {
+        if (message.includes('Tell me a joke')) {
         Slack.postMessageToChannel(channelName, jokes[random]);
         }
+
+        if (message.includes('tell me a joke')) {
+        Slack.postMessageToChannel(channelName, jokes[random]);
+        }
+    
 
 
 
@@ -60,14 +64,6 @@ module.exports = {
 
         if (message.includes('thank you')) {
             Slack.postMessageToChannel(channelName, grat);
-        }
-
-        if (message.includes('Tell me a joke')) {
-            Slack.postMessageToChannel(channelName, joke);
-        }
-
-        if (message.includes('tell me a joke')) {
-            Slack.postMessageToChannel(channelName, joke);
         }
 
         if (message.includes('Rap for me')) {
