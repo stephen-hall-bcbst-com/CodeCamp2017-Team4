@@ -21,6 +21,7 @@ module.exports = {
         if (lc.includes('Thank')) {
             response = 'your welcome!';
         } else if (lc.includes('Good job')) {
+            response = 'your welcome';
             
         }
 
