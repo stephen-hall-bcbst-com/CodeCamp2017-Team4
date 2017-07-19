@@ -27,14 +27,9 @@ module.exports = {
      } else if (message.includes("adding")) {
          Slack.postMessageToChannel(channelName, "If you ask the bot to add two numbers and include the numbers you would like to add with the plus sign inbetween, the bot will add your two values.");
 
-    /* used when message says "help" and specifies with how to ask the bot to tell you a quote;
-     } else if (message.includes("quote")) {
-            Slack.postMessageToChannel(channelName, "If you ask the bot to tell you a quote in the message bar it will respond with a quote.");
-        }
-        */
 
         // *********************************************************************
         // STOP CODING!
         // *********************************************************************
-    },
-};
+    }
+    }
