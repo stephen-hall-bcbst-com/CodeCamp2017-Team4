@@ -26,7 +26,7 @@ module.exports = {
        
         // used when message says "help" and specifies that they need help with how to ask the bot to tell a joke;
         } else if (message.includes("joke")) {
-            response = "If you say to the bot to 'tell me joke' in the message bar it is sure to make you laugh.";
+            response = "If you say to the bot to 'Tell me joke' in the message bar it is sure to make you laugh. Just make sure to use a capital 'T' ";
             
         // used when message says "help" and specifies that they need help with how to ask the bot to add two numbers;  
         } else if (message.includes("adding")) {
@@ -37,8 +37,8 @@ module.exports = {
             }
        
         // used when message says "help" and specifies that they need help with how to tell to the bot to tell a quote
-        } else if (message.includes("quote")) {
-            response = "If you say to the bot 'tell me a quote' the bot will respond with a quote.";
+        } else if (message.includes("Quote")) {
+            response = "If you say to the bot 'Tell me a quote' the bot will respond with a quote.Just make sure to use a capital 'T'";
            }
    
             Slack.postMessageToChannel(channelName, response);
