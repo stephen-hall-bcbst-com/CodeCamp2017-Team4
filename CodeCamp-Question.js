@@ -28,12 +28,11 @@ module.exports = {
     } if (question.includes("When is your birthday?")) {
              response = "My birthday is July 18th, 2017.";
     } if (question.includes("+") || question.includes("plus")) {
-        question.replace('?', '');
-        question.replace('+', ' ');
-        question.replace('plus', ' ');
+        question = question.replace('?', '');
+        question = question.replace('+', ' ');
+        question = question.replace('plus', ' ');
         var array = question.split(" ");
         var result = 0;
-        Slack.postMessageToChannel(array);
         for (var x = 0; x < array.length; x++) {
             var num = parseInt(array[x]);
             if (!isNaN(num)) {
