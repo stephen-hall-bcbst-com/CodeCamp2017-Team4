@@ -16,7 +16,7 @@ module.exports = {
 
         // response variables
         var response = "sorry i dont know how to react to that";
-        var grat = 'youre welcome';
+        var grat = 'you are welcome';
         var greetings = 'Hi there';
         var thanks = 'Thank you';
         var rap = 'What is rapping? i was born 3 days ago';
