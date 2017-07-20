@@ -48,7 +48,7 @@ module.exports = {
         // used when message says "help" and specifies that they need help with how to tell the bot to tell the user their birthstone;
          if (message.includes("birthstone")) {
             if (memory.askedAboutBirthstone == false) {
-                 response = "If you say to me 'Tell me my birthstone' I will respond with 'What is your birthmonth'. When you tell me your birthmonth I will then tell you your birthstone";
+                 response = "If you say to me 'Tell me my birthstone' I will respond with 'What is your birth month'. When you tell me your birthmonth I will then tell you your birthstone";
                  memory.askedAboutBirthstone = true;
         // used when user has asked the same help message
          } else if (memory.askedAboutBirthstone == false) {
