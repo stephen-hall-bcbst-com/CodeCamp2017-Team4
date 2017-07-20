@@ -20,16 +20,31 @@ module.exports = {
         response = "Today is partly cloudy with a high temperature of 96 degrees and a low of 73.";
      
              // what to answer when asked why is the sky blue 
-    } if (question.includes("why") || question.includes("sky") || question.includes("blue")) {
+    } if (question.includes("why") && question.includes("sky") && question.includes("blue")) {
             response = "Blue is scattered by air molecules when sunlight reaches Earth. That is why we see a blue sky."; 
             
            
             // what to answer when asked about birthday 
     } if (question.includes("When is your birthday?")) {
              response = "My birthday is July 18th, 2017.";
-    }
+    } if (question.includes("+") || question.includes("plus")) {
+        question.replace('?', '');
+        question.replace('+', ' ');
+        question.replace('plus', ' ');
+        var array = question.split(" ");
+        var result = 0;
+        for (var x = 0; x < array.length; x++) {
+            if (!isNaN(array[x])) {
+                result += parseInt(array[x]);
+            }
+        }
+        response = result;
+     }
+
               // calls out function
         Slack.postMessageToChannel(channelName, response);
+
+        
 
         
         // *********************************************************************
