@@ -33,7 +33,7 @@ module.exports = {
         // used when message says "help" and specifies that they need help with how to ask the bot to add two numbers;  
         } else if (message.includes("adding")) {
             if (memory.askedAboutAdding == false) {
-                response = "If you ask me to add two numbers and include the numbers you would like to add with the plus sign, I will add your two values.";
+                response = "If you ask me to add two numbers and include the numbers you would like to add with the plus sign, I will add your two values. Just make sure that your question is formatted like this: ' What is 2 + 2 ?' ";
                 memory.askedAboutAdding = true;
         // used when user has asked the same help question more than once 
           } else if (memory.askedAboutAdding == true) {
