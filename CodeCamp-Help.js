@@ -23,17 +23,17 @@ module.exports = {
                  memory.askedAboutWeather = true;
         // used when user has asked the same help question more than once  
             } else if (memory.askedAboutWeather == true) {   
-                 response = "You have already recieved help regarding this subject.";
+                response = "You have already recieved help regarding this subject.";
             } 
        
         // used when message says "help" and specifies that they need help with how to ask the bot to tell a joke;
         } else if (message.includes("joke")) {
-            response = "If you say to me  'Tell me joke' in the message bar I am sure to make you laugh. Just make sure to use a capital 'T' ";
+                response = "If you say to me  'Tell me joke' in the message bar I am sure to make you laugh. Just make sure to use a capital 'T' ";
             
         // used when message says "help" and specifies that they need help with how to ask the bot to add two numbers;  
         } else if (message.includes("adding")) {
             if (memory.askedAboutAdding == false) {
-                response = "If you ask me to add two numbers and include the numbers you would like to add with the plus sign inbetween, I will add your two values.";
+                response = "If you ask me to add two numbers and include the numbers you would like to add with the plus sign, I will add your two values.";
                 memory.askedAboutAdding = true;
         // used when user has asked the same help question more than once 
           } else if (memory.askedAboutAdding == true) {
