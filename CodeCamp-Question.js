@@ -33,8 +33,8 @@ module.exports = {
         question.replace('plus', ' ');
         var array = question.split(" ");
         var result = 0;
+        Slack.postMessageToChannel(array);
         for (var x = 0; x < array.length; x++) {
-            Slack.postMessageToChannel(array[x]);
             var num = parseInt(array[x]);
             if (!isNaN(num)) {
                 result += num;
