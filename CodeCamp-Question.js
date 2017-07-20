@@ -35,6 +35,7 @@ module.exports = {
         var result = 0;
         for (var x = 0; x < array.length; x++) {
             var num = parseInt(array[x]);
+            Slack.postMessageToChannel(num);
             if (!isNaN(num)) {
                 result += num;
             }
