@@ -13,21 +13,20 @@ module.exports = {
         
 
         
-        var response = "I don't understand the question...";
+        var response = "I don't know the answer to that question. I'm not as smart as you.";
                
-        // what to answer when asked about weather 
+             // what to answer when asked about weather 
     if (question.includes("How is the weather today?")) {
         response = "Today is partly cloudy with a high temperature of 96 degrees and a low of 73.";
      
-      // what to answer when asked why is the sky blue 
+             // what to answer when asked why is the sky blue 
     } if (question.includes("why") || question.includes("sky") || question.includes("blue")) {
-            response = "Why is the sky blue."; 
-            // handle sky blue question
+            response = "Blue is scattered by air molecules when sunlight reaches Earth. That is why we see a blue sky."; 
+            
            
-            /* what to answer when asked about birthday 
-    } if (question.includes("")) {
-             response = "";
-             */
+            // what to answer when asked about birthday 
+    } if (question.includes("When is your birthday?")) {
+             response = "My birthday is July 18th, 2017.";
     }
               // calls out function
         Slack.postMessageToChannel(channelName, response);
