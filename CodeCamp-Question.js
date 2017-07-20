@@ -17,11 +17,11 @@ module.exports = {
                
         // what to answer when asked about weather 
     if (question.includes("How is the weather today?")) {
-        response = "Today is partly cloudy with a high temperature of 96 degrees and a low of 73";
+        response = "Today is partly cloudy with a high temperature of 96 degrees and a low of 73.";
      
       // what to answer when asked why is the sky blue 
     } if (question.includes("why") || question.includes("sky") || question.includes("blue")) {
-            response = "why is the sky blue."; 
+            response = "Why is the sky blue."; 
             // handle sky blue question
            
             /* what to answer when asked about birthday 
