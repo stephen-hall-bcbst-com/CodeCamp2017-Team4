@@ -15,7 +15,7 @@ module.exports = {
         // *********************************************************************
 
         // response variables
-        var response = "sorry i dont know how to react to that";
+        // var response = "sorry i dont know how to react to that";
         var grat = 'you are welcome';
         var greetings = 'Hi there';
         var thanks = 'Thank you';
@@ -75,8 +75,8 @@ module.exports = {
             }
          }
 
-       
-    
+
+
 
 
         // The bots responses to things you say

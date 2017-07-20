@@ -22,11 +22,12 @@ module.exports = {
              // what to answer when asked why is the sky blue 
     } if (question.includes("why") && question.includes("sky") && question.includes("blue")) {
             response = "Blue is scattered by air molecules when sunlight reaches Earth. That is why we see a blue sky."; 
-            
            
+
             // what to answer when asked about birthday 
     } if (question.includes("When is your birthday?")) {
              response = "My birthday is July 18th, 2017.";
+            // Adding a array to add numbers
     } if (question.includes("+") || question.includes("plus")) {
         question = question.replace('?', '');
         question = question.replace('+', ' ');
