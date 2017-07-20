@@ -34,8 +34,10 @@ module.exports = {
         var array = question.split(" ");
         var result = 0;
         for (var x = 0; x < array.length; x++) {
-            if (!isNaN(array[x])) {
-                result += parseInt(array[x]);
+            var num = parseInt(array[x]);
+            Slack.postMessageToChannel(num);
+            if (!isNaN(num)) {
+                result += num;
             }
         }
         response = result;
