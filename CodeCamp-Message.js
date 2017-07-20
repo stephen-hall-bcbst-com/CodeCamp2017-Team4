@@ -112,6 +112,9 @@ module.exports = {
             Slack.postMessageToChannel(channelName, rap);
         }
 
+
+
+        // The start of the BTM
         if (message.includes('Tell me my birthstone')) {
             Slack.postMessageToChannel(channelName, stone);
         }
