@@ -65,10 +65,6 @@ module.exports = {
             }
         
 
-       
-
-        
-
         // --------------------------------------------------------------------------------------
         // Code for activating jokes. No joke is told more than once until all have been used once         
         } else if (lc.includes('tell me a joke')) {
@@ -130,7 +126,6 @@ function birthstone(msg, channelName, Slack) {
     var stones = birthstoneData.birthstones;
     var response = "";
 
-    // Used if user says tell me my birthstone with an uppercase 'T'
    if (msg.toLowerCase().includes('tell me my birthstone')) {
         response = "What is your birth month?";
         memory.birthstoneConversation = true;
