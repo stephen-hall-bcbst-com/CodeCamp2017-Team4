@@ -69,10 +69,11 @@ module.exports = {
 
         
 
+        // --------------------------------------------------------------------------------------
         // Code for activating jokes. No joke is told more than once until all have been used once         
         } else if (lc.includes('tell me a joke')) {
             // List of jokes. 
-        var jokes = ["What do you call a fake noodle? an impasta.", 
+            var jokes = ["What do you call a fake noodle? an impasta.", 
                     "How does a penguin build it’s house? Igloos it together.", 
                     "What did the ocean say to the shore? Nothing, it just waved.", 
                     "Why do crabs never give to charity? Because they’re shellfish.", 
