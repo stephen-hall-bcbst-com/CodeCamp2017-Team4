@@ -6,6 +6,8 @@ var askedAboutAdding = false;
 var lastJokeTold = 0;
 var lastQuoteTold = 0;
 var askedAboutBirthstone = false;
+var birthstoneConversation = false;
+
 module.exports = {
     
         botData: botData,
@@ -14,7 +16,6 @@ module.exports = {
         lastJokeTold: lastJokeTold,
         lastQuoteTold: lastQuoteTold,
         askedAboutBirthstone: askedAboutBirthstone,
+        birthstoneConversation: birthstoneConversation,
     
-
-
 };

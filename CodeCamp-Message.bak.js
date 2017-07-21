@@ -1,8 +1,6 @@
 'use strict';
 
 var memory = require('./CodeCamp-Memory.js');
-var Helper = require('./Helpers.js');
-var birthstoneData = require('./data/birthstones');
 
 module.exports = {
     /**
@@ -16,21 +14,15 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
 
-        // check for birthstones first
-        if (birthstone(message, channelName, Slack)) {
-            return;
-        }
-
         // response variables
         var response = "I'm sorry I can't respond to that. I'm not as smart as you.";
         var grat = 'you are welcome';
         var greetings = 'Hi there';
         var thanks = 'Thank you';
         var rap = 'What is rapping? i was born 3 days ago';
-       // var stone = 'What is your birth month?';
+        var stone = 'What is your birth month?';
         
         // variables for birthstone function
-        /*
         var jan = 'garnet';
         var feb = 'amethyst';
         var march = 'aquamarine';
@@ -43,7 +35,7 @@ module.exports = {
         var october = 'opal';
         var november = 'topaz';
         var december = 'tanzanite, zircon and turquoise';
-        */
+        
         
         
         
@@ -83,6 +75,10 @@ module.exports = {
             }
          }
 
+       
+    
+
+
         // The bots responses to things you say
         
         // Used if user says hello with an uppercases 'h'; 
@@ -120,62 +116,91 @@ module.exports = {
          
          // The start of the BTM
 
-        Slack.postMessageToChannel(channelName, response);
+        // Used if user says tell me my birthstone with an uppercase 'T'
+        if (message.includes('Tell me my birthstone')) {
+            response = stone;
+        }
+        // Used if user says tell me my birthstone with a lowercase 't'
+        if (message.includes('tell me my birthstone')) {
+            response = stone;
+        }
+
+        // birthstone telling machine or BTM
+        // birthstone for January;
+        if (message.includes('January')) {
+            response = jan;
+        }
+        // birthstone for February
+        if (message.includes('February')) {
+            response = feb;
+        }
+        // birthstone for March 
+        if (message.includes('March')) {
+            response = march;
+        }
+        // birthstone for April
+        if (message.includes('April')) {
+            response = april;
+        }
+        // birthstone for May 
+        if (message.includes('May')) {
+            response = may;
+        }
+        // birthstone for June 
+        if (message.includes('June')) {
+            response = june;
+        }
+
+        // birthstone for July 
+        if (message.includes('July')) {
+            response = july;
+        }
+
+        // birthstone for August 
+        if (message.includes('August')) {
+            response = august;
+        }
+
+        // birthstone for September 
+        if (message.includes('September')) {
+            response = september;
+        }
+
+        // birthstone for October 
+        if (message.includes('October')) {
+            response = october;
+        }
+
+        // birthstone for November 
+        if (message.includes('November')) {
+            response = november;
+        }
+
+        // birthstone for December 
+        if (message.includes('December')) {
+            response = december;
+        }
+        
+        
+
+
+        
+
+        
+        
+
+        
+
+
+
+
+
+
+
+      
 
         // *********************************************************************
         // STOP CODING!
         // *********************************************************************
     },
 };
-
-/**
- * DESCRIBE THE FUNCTION HERE
- * 
- * @param {string} msg
- * @param {string} channelName
- * @param {Slackbots} Slack API
- * @return {boolean} true if birthstone message handled 
- */
-function birthstone(msg, channelName, Slack) {
-    var stones = birthstoneData.birthstones;
-    var response = "";
-
-    // Used if user says tell me my birthstone with an uppercase 'T'
-    if (msg.toLowerCase().includes('tell me my birthstone')) {
-        response = "What is your birth month?";
-        memory.birthstoneConversation = true;
-        Slack.postMessageToChannel(channelName, response);
-        return true;
-    } 
-
-    if (memory.birthstoneConversation) {
-        var monthName = Helper.getLastWord(msg);
-        
-        // clean up the month name
-        monthName = monthName.toLowerCase();
-        monthName = monthName.trim();
-        monthName = monthName.replace(".", "");
-        monthName = monthName.replace(",", "");
-
-        if (memory.birthstoneConversation) {
-            for (var x = 0; x < stones.length; x++) {
-                if (stones[x].month == monthName) {
-                    // found a match
-                    response = "The birthstone for " + monthName + " is " + stones[x].name + ".  ";
-                    response = response + "Here's a picture for you: " + stones[x].image + ".";
-                    memory.birthstoneConversation = false;
-                } 
-            }
-
-            if (response == "") {
-                response = "I don't recognize that month.";
-            }
-        }
-
-        Slack.postMessageToChannel(channelName, response);
-        return true;
-    }
-
-    return false;
-}
-
