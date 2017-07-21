@@ -165,8 +165,8 @@ function birthstone(msg, channelName, Slack) {
             for (var x = 0; x < stones.length; x++) {
                 if (stones[x].month == monthName) {
                     // found a match
-                    response = "The birthstone for " + monthName + " is " + stones[x].name + ".  ";
-                    response = response + "Here's a picture for you: " + stones[x].image + ".";
+                    response = "The birthstone for " + monthName + " is " + stones[x].name + ".  " + stones[x].description;
+                    response = response + " Here's a picture for you: " + stones[x].image + ".";
                     memory.birthstoneConversation = false;
                 } 
             }
