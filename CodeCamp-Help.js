@@ -22,7 +22,7 @@ module.exports = {
                 response = "If you type your question about the weather in the message bar, I can tell you what the weather is today!";
                  memory.askedAboutWeather = true;
         // used when user has asked the same help question more than once  
-            } else if (memory.askedAboutWeather == true) {   
+            } else {   
                 response = "You have already recieved help regarding this subject.";
             } 
        
