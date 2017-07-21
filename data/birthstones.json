@@ -1,0 +1,78 @@
+{
+    "birthstones" : [
+        {
+            "name": "*Garnet*",
+            "month": "january",
+            "description": "A garnet is red and shiny.",
+            "image": "https://www.gemselect.com/other-info/graphics/almandine-garnet-large_info.jpg"
+        },
+        {
+            "name": "*Amethyst*",
+            "month": "february",
+            "description": "A amethyst is purple and shiny. You could probably see you reflection in it.",
+            "image": "http://www.stallandkessler.com/files/htr1/amethyst.jpg"
+        },
+        {
+           
+            "name": "*Aquamarine*",
+            "month": "march",
+            "description": "An aquamairne is light blue and shiny.It is a very pretty stone.",
+            "image": "http://www.ringswithlove.com/wp-content/uploads/2013/03/Aquamarine-birthstones-3.jpg"
+        },
+        {
+         "name": "*Diamond*",
+            "month": "april",
+            "description": "A diamond is a very pretty stone. Most people like to wear it around their necks or their fingers.",
+            "image": "http://www.tiffany.ca/shared/images/engagement/flawless-diamond.png"
+        },
+        {
+          "name": "*Emerald*",
+            "month": "may",
+            "description": "An emerald is green and shiny.It reminds me of a sea turtle.",
+            "image": "http://4.bp.blogspot.com/-ryfEH3NFrZQ/TcLJXHHUJtI/AAAAAAAABGg/Es9ZJNxevAo/s1600/1838emerald.jpg"
+        },
+        {
+         "name": "*Pearl*",
+            "month": "june",
+            "description": "A pearl is round and white.Pearl's are often on necklaces.",
+            "image": "http://www.stallandkessler.com/files/htrh/whitepearl.jpg"
+        },
+        {
+         "name": "*Ruby*",
+            "month": "july",
+            "description": "A ruby is nice and red. It very shiny.",
+            "image": "http://moneymatters101.com/jewelry/images/ruby.jpg"
+        },
+        {
+        "name": "*Peridot*",
+            "month": "august",
+            "description": "A Peridot is a pretty stone.It is light green, kind of like the color of weeds in the yard. Much prettier though.",
+            "image": "http://yourbirthstones.com/wp-content/uploads/2012/11/Peridot-photo-2.jpg"
+        },
+        {
+            "name": "*Sapphire*",
+            "month": "september",
+            "description": " A Sapphire is a pretty royal blue stone. I imagine it as a color on a kings cape.",
+            "image": "http://cmweldon.ie/wp-content/uploads/2014/04/kashmir-blue-sapphire-b2670.jpg"
+        },
+        {
+          "name": "*Opal*",
+            "month": "october",
+            "description.": "Opal is very pretty. It is very colorful and kind of looks like bubble gum",
+            "image": "http://2.bp.blogspot.com/-8eRpA63W8Yk/UGFPe4Vk3_I/AAAAAAAABgw/UjW1XmulWpM/s1600/6.88-ct.-Coober-Pedy-Crystal-Opal1.jpg"   
+        },
+        {
+           "name": "*Topaz*",
+            "month": "november",
+            "description.": "Topaz can come in different colors. My favorite is the yellow topaz.",
+            "image": "https://kalajee.files.wordpress.com/2013/11/yellow-topaz.jpg "
+        },
+        {
+            "name": "*Tanzanite*",
+            "month": "december",
+            "description": "This stone is similar to sapphire. It's a bit more purple.",
+            "image": "https://www.tanzanitejewelrydesigns.com/media/catalog/product/cache/2/image/700x700/9df78eab33525d08d6e5fb8d27136e95/t/a/tanzanite-gemstone-1461.jpg"
+        }
+    ]
+
+}
