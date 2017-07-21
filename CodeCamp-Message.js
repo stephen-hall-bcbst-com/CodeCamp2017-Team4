@@ -83,13 +83,10 @@ module.exports = {
             }
          }
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> acd83e1d1905d249e6de98b50d56be3fa9be0803
         // The bots responses to things you say
         
         // Used if user says hello with an uppercases 'h'; 
