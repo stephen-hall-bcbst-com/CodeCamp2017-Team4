@@ -6,23 +6,24 @@ var birthstoneData = require('./data/birthstones');
 
 module.exports = {
     /**
-     * @param {string} message
+     * @param {string} msg
      * @param {string} channelName
      * @param {string} userName
      * @param {Object} Slack
      */
-    message_received: function(message, channelName, userName, Slack) {
+    message_received: function(msg, channelName, userName, Slack) {
         // *********************************************************************
         // CODE HERE!
         // *********************************************************************
 
+        var lc = msg.toLowerCase();
         // check for birthstones first
-        if (birthstone(message, channelName, Slack)) {
+        if (birthstone(lc, channelName, Slack)) {
             return;
         }
 
         // response variables
-        var response = "I'm sorry I can't respond to that. I'm not as smart as you.";
+        var response = (response);
         var grat = 'you are welcome';
         var greetings = 'Hi there';
         var thanks = 'Thank you';
@@ -56,13 +57,13 @@ module.exports = {
        
         
         // Code for activating quotes. Used so no quote is repeated until all have been used once.  
-        if (message.includes('Tell me a quote')) {
+        if (lc.includes('tell me a quote')) {
             Slack.postMessageToChannel(channelName, quotes[memory.lastQuoteTold]);
             memory.lastQuoteTold = memory.lastQuoteTold + 1; 
             if (memory.lastQuoteTold == quotes.length) {
                 memory.lastQuoteTold = 0; 
             }
-        }
+        
 
        
 
@@ -74,14 +75,13 @@ module.exports = {
                     "What do you call a man with no nose and no body? Nobody nose."];
 
         // Code for activating jokes. No joke is told more than once until all have been used once         
-
-        if (message.includes('Tell me a joke')) {
+        } else if (lc.includes('tell me a joke')) {
             Slack.postMessageToChannel(channelName, jokes[memory.lastJokeTold]);
             memory.lastJokeTold = memory.lastJokeTold + 1; 
             if (memory.lastJokeTold == jokes.length) {
                 memory.lastJokeTold = 0; 
             }
-         }
+        
 
 
 
@@ -90,38 +90,23 @@ module.exports = {
         // The bots responses to things you say
         
         // Used if user says hello with an uppercases 'h'; 
-        if (message.includes('Hello')) {
-            response = greetings; 
-        }
+       
         // Used if user says hello with a lowercase 'h'; 
-        if (message.includes("hello")) {
+        } else if (lc.includes("hello")) {
             response = greetings;
-        }
-        // Used if user says Good job with an upper case 'G';
-        if (message.includes('Good job')) {
-            response = thanks; 
-        }
         // Used if user says good job with an upper case 'g';
-        if (message.includes('good job')) {
+        } else if (lc.includes('good job')) {
            response = thanks; 
-        }
-        // Used if user says thank you with an upper case 'T'; 
-        if (message.includes('Thank you')) {
+         // Used if user says thank you with a lower case 't';
+        } else if (lc.includes('thank you')) {
             response = grat;
-        }
-        // Used if user says thank you with a lower case 't';
-        if (message.includes('thank you')) {
-            response = grat;
-        }
-        // Used if user says rap for me with an uppercase 'R'; 
-        if (message.includes('Rap for me')) {
+         // Used if user says rap for me with a lowercase 'r'; 
+        } else if (lc.includes('rap for me')) {
             response = rap;
+        } else {
+            response = "Im sorry I can't respond to that. I'm not as smart as you."; 
         }
-        // Used if user says rap for me with a lowercase 'r'; 
-        if (message.includes('rap for me')) {
-            response = rap;
-        }
-         
+        
          // The start of the BTM
 
         Slack.postMessageToChannel(channelName, response);
@@ -145,7 +130,7 @@ function birthstone(msg, channelName, Slack) {
     var response = "";
 
     // Used if user says tell me my birthstone with an uppercase 'T'
-    if (msg.toLowerCase().includes('tell me my birthstone')) {
+   if (msg.toLowerCase().includes('tell me my birthstone')) {
         response = "What is your birth month?";
         memory.birthstoneConversation = true;
         Slack.postMessageToChannel(channelName, response);
